@@ -6,8 +6,10 @@ Navigate to **Stores** > **Configuration** > **Customers** section > **Customer 
 
 - Customer Registration
   * restriction by email patterns
+  * set error message
 - Customer Login
   * restriction by email patterns
+  * set error message
 
 ## Installing the Extension
     
