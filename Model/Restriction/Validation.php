@@ -45,7 +45,11 @@ class Validation
             $observers = $this->restrictionPool->get($restriction);
             if (!empty($observers)) {
                 foreach ($observers as $observer) {
-                    if (!$observer->isValid($value)) {
+                    $isValid = $observer->isValid($value);
+                    if (!$observer->isAllowMode()) {
+                        $isValid = !$isValid;
+                    }
+                    if (!$isValid) {
                         if ($throwException) {
                             $this->throwException($observer->getErrorMessage());
                         }

@@ -27,6 +27,17 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     }
     
     /**
+     * Check if allow restriction
+     * 
+     * @param string $restriction
+     * @return bool
+     */
+    public function isAllowRestriction($restriction, $path)
+    {
+        return $this->getRestrictionData($restriction, $path . '/condition') == 'allow' ? true : false;
+    }
+    
+    /**
      * Retrieve restriction data
      * 
      * @param string $restriction

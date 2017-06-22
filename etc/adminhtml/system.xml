@@ -20,7 +20,11 @@
                 </field>
                 <group id="email" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Email Restriction</label>
-                    <field id="patterns" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <field id="condition" translate="label" sortOrder="10" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Apply conditions</label>
+                        <source_model>MageKey\CustomerRestriction\Model\Config\Source\RestrictionConditions</source_model>
+                    </field>
+                    <field id="patterns" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Email Patterns</label>
                         <frontend_model>MageKey\CustomerRestriction\Block\Adminhtml\System\Config\PatternMap</frontend_model>
                         <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
@@ -38,7 +42,11 @@
                 </field>
                 <group id="email" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Email Restriction</label>
-                    <field id="patterns" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <field id="condition" translate="label" sortOrder="10" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Apply conditions</label>
+                        <source_model>MageKey\CustomerRestriction\Model\Config\Source\RestrictionConditions</source_model>
+                    </field>
+                    <field id="patterns" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Email Patterns</label>
                         <frontend_model>MageKey\CustomerRestriction\Block\Adminhtml\System\Config\PatternMap</frontend_model>
                         <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>

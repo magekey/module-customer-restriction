@@ -9,12 +9,14 @@
         <magekey_customerrestriction>
             <registration>
                 <email>
-                    <error_message>Your account is currently restricted</error_message>
+                    <condition>allow</condition>
+                    <error_message>This action is currently restricted</error_message>
                 </email>
             </registration>
             <login>
                 <email>
-                    <error_message>Your account is currently restricted</error_message>
+                    <condition>allow</condition>
+                    <error_message>This action is currently restricted</error_message>
                 </email>
             </login>
         </magekey_customerrestriction>

@@ -7,7 +7,14 @@ namespace MageKey\CustomerRestriction\Model\Restriction;
 interface RestrictionInterface 
 {
     /**
-     * Check if restriction is valid
+     * Check if is allow mode
+     *
+     * @return bool
+     */
+    public function isAllowMode();
+    
+    /**
+     * Check if restriction is valid in allow mode
      *
      * @param mixed $value
      * @return bool

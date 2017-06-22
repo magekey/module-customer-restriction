@@ -19,20 +19,19 @@ class Filter
     }
     
     /**
-     * Check if all patterns invalid
+     * Check if any pattern valid
      *
      * @param string $value
      * @param array $patterns
      * @return bool
      */
-    public function isAllPatternsInvalid($value, array $patterns)
+    public function isAnyPatternValid($value, array $patterns)
     {
         foreach ($patterns as $pattern) {
             if ($this->isPatternValid($value, $pattern)) {
-                return false;
+                return true;
             }
         }
-        
-        return true;
+        return false;
     }
 }

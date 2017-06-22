@@ -33,7 +33,17 @@ class Email implements RestrictionInterface
     }
     
     /**
-     * Check if restriction is valid
+     * Check if is allow mode
+     *
+     * @return bool
+     */
+    public function isAllowMode()
+    {
+        return $this->restrictionHelper->isAllowRestriction(RestrictionHelper::RESTRICTION_REGISTRATION, 'email');
+    }
+    
+    /**
+     * Check if restriction is valid in allow mode
      *
      * @param mixed $value
      * @return bool
@@ -42,9 +52,7 @@ class Email implements RestrictionInterface
     {
         $emailPatterns = $this->restrictionHelper->getRestrictionPatterns(RestrictionHelper::RESTRICTION_REGISTRATION, 'email/patterns');
         if (!empty($emailPatterns)) {
-            if (!$this->restrictionFilter->isAllPatternsInvalid($value, $emailPatterns)) {
-                return false;
-            }
+            return $this->restrictionFilter->isAnyPatternValid($value, $emailPatterns);
         }
         return true;
     }
