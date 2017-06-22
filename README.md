@@ -1,10 +1,11 @@
 # Magento 2 Customer Restriction
 
 ## Features:
- - Customer Registration
-   - restriction by email patterns
- - Customer Login
-   - restriction by email patterns
+
+- Customer Registration
+  * restriction by email patterns
+- Customer Login
+  * restriction by email patterns
 
 ## Installing the Extension
     
