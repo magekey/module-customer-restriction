@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageKey. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="magekey_customerrestriction" translate="label" type="text" sortOrder="325" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Customer Restriction</label>
+            <tab>customer</tab>
+            <class>magekey-customer-restriction</class>
+            <resource>MageKey_CustomerRestriction::config</resource>
+            <group id="registration" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Customer Registration</label>
+                <attribute type="expanded">1</attribute>
+                <field id="enabled" translate="label" sortOrder="10" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Restriction Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <group id="email" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Restriction</label>
+                    <field id="patterns" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Email Patterns</label>
+                        <frontend_model>MageKey\CustomerRestriction\Block\Adminhtml\System\Config\PatternMap</frontend_model>
+                        <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    </field>
+                    <field id="error_message" translate="label" sortOrder="100" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Error Message</label>
+                    </field>
+                </group>
+            </group>
+            <group id="login" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Customer Login</label>
+                <field id="enabled" translate="label" sortOrder="10" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Restriction Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <group id="email" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Restriction</label>
+                    <field id="patterns" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Email Patterns</label>
+                        <frontend_model>MageKey\CustomerRestriction\Block\Adminhtml\System\Config\PatternMap</frontend_model>
+                        <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    </field>
+                    <field id="error_message" translate="label" sortOrder="100" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Error Message</label>
+                    </field>
+                </group>
+            </group>
+        </section>
+    </system>
+</config>

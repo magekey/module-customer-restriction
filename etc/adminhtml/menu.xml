@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageKey. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend/etc/menu.xsd">
+    <menu>
+        <add id="MageKey_CustomerRestriction::magekey_customer_restriction" title="Customer Restriction" module="MageKey_CustomerRestriction" sortOrder="100" dependsOnModule="MageKey_CustomerRestriction" parent="Magento_Customer::customer" action="adminhtml/system_config/edit/section/magekey_customerrestriction" resource="MageKey_CustomerRestriction::magekey_customer_restriction"/>
+    </menu>
+</config>

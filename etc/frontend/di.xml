@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageKey. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Customer\Model\AccountManagement">
+        <plugin name="magekey-customerrestriction-account-management" type="MageKey\CustomerRestriction\Plugin\AccountManagement" sortOrder="1"/>
+    </type>
+    
+    <type name="MageKey\CustomerRestriction\Model\Restriction\Pool">
+        <arguments>
+            <argument name="restrictions" xsi:type="array">
+                <item name="registration" xsi:type="array">
+                    <item name="email" xsi:type="string">MageKey\CustomerRestriction\Model\Restriction\Registration\Email</item>
+                </item>
+                <item name="login" xsi:type="array">
+                    <item name="email" xsi:type="string">MageKey\CustomerRestriction\Model\Restriction\Login\Email</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    
+</config>

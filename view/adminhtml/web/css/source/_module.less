@@ -1,0 +1,29 @@
+// /**
+//  * Copyright © MageKey. All rights reserved.
+//  */
+
+.setMageKeyLogo(@module; @position) {
+    background-image: url('../@{module}/images/logo-menu.png');
+    background-repeat: no-repeat;
+    background-position: @position;
+}
+
+#nav .item-magekey-customer-restriction a {
+    .setMageKeyLogo(
+        'MageKey_CustomerRestriction',
+        right 2rem center
+    );
+}
+
+.admin__page-nav-item,
+.admin__page-nav-item._active {
+    &.magekey-customer-restriction {
+        .admin__page-nav-link,
+        .admin__page-nav-link:hover {
+            .setMageKeyLogo(
+                'MageKey_CustomerRestriction',
+                right 2rem center
+            );
+        }
+    }
+}
