@@ -2,6 +2,8 @@
 
 ## Features:
 
+Navigate to **Stores** > **Configuration** > **Customers** section > **Customer Restriction**
+
 - Customer Registration
   * restriction by email patterns
 - Customer Login
