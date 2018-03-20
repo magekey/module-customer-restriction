@@ -16,7 +16,11 @@ class Filter
      */
     public function isPatternValid($value, $pattern)
     {
-        return preg_match('#' . $pattern . '#si', $value);
+        try {
+            return preg_match('#' . $pattern . '#si', $value);
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     /**

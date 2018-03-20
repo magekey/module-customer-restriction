@@ -5,8 +5,8 @@
  */
 namespace MageKey\CustomerRestriction\Model\Restriction;
 
-use MageKey\CustomerRestriction\Helper\Data as RestrictionHelper;
 use Magento\Framework\Exception\LocalizedException;
+use MageKey\CustomerRestriction\Helper\Data as RestrictionHelper;
 
 class Validation
 {
