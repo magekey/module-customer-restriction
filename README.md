@@ -12,7 +12,7 @@ Navigate to **Stores** > **Configuration** > **Customers** section > **Customer 
   * set error message
 
 ## Installing the Extension
-    
+
     composer require magekey/module-customer-restriction
 
 ## Deployment
@@ -25,4 +25,5 @@ Navigate to **Stores** > **Configuration** > **Customers** section > **Customer 
     php bin/magento maintenance:disable                 #Disable maintenance mode
 
 ## Versions tested
-> 2.1.7
+> 2.1.12
+> 2.2.3
