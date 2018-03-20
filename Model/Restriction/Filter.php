@@ -1,6 +1,7 @@
 <?php
 /**
  * Copyright © MageKey. All rights reserved.
+ * See LICENSE.txt for license details.
  */
 namespace MageKey\CustomerRestriction\Model\Restriction;
 
@@ -17,7 +18,7 @@ class Filter
     {
         return preg_match('#' . $pattern . '#si', $value);
     }
-    
+
     /**
      * Check if any pattern valid
      *

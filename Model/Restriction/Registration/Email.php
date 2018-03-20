@@ -1,6 +1,7 @@
 <?php
 /**
  * Copyright © MageKey. All rights reserved.
+ * See LICENSE.txt for license details.
  */
 namespace MageKey\CustomerRestriction\Model\Restriction\Registration;
 
@@ -14,7 +15,7 @@ class Email implements RestrictionInterface
      * @var RestrictionHelper
      */
     protected $restrictionHelper;
-    
+
     /**
      * @var RestrictionFilter
      */
@@ -31,7 +32,7 @@ class Email implements RestrictionInterface
         $this->restrictionHelper = $restrictionHelper;
         $this->restrictionFilter = $restrictionFilter;
     }
-    
+
     /**
      * Check if is allow mode
      *
@@ -41,7 +42,7 @@ class Email implements RestrictionInterface
     {
         return $this->restrictionHelper->isAllowRestriction(RestrictionHelper::RESTRICTION_REGISTRATION, 'email');
     }
-    
+
     /**
      * Check if restriction is valid in allow mode
      *
@@ -56,7 +57,7 @@ class Email implements RestrictionInterface
         }
         return true;
     }
-    
+
     /**
      * Retrieve error message
      *

@@ -1,6 +1,7 @@
 <?php
 /**
  * Copyright © MageKey. All rights reserved.
+ * See LICENSE.txt for license details.
  */
 namespace MageKey\CustomerRestriction\Helper;
 
@@ -9,12 +10,12 @@ use Magento\Store\Model\ScopeInterface;
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
     const RESTRICTION_REGISTRATION = 'registration';
-    
+
     const RESTRICTION_LOGIN = 'login';
-    
+
     /**
      * Check if restriction enabled
-     * 
+     *
      * @param string $restriction
      * @return bool
      */
@@ -25,10 +26,10 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             ScopeInterface::SCOPE_STORE
         );
     }
-    
+
     /**
      * Check if allow restriction
-     * 
+     *
      * @param string $restriction
      * @return bool
      */
@@ -36,10 +37,10 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return $this->getRestrictionData($restriction, $path . '/condition') == 'allow' ? true : false;
     }
-    
+
     /**
      * Retrieve restriction data
-     * 
+     *
      * @param string $restriction
      * @param string $path
      * @return mixed
@@ -51,10 +52,10 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             ScopeInterface::SCOPE_STORE
         );
     }
-    
+
     /**
      * Retrieve restriction patterns
-     * 
+     *
      * @param string $restriction
      * @param string $path
      * @return array
@@ -72,7 +73,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
                 }
             }
         }
-        
+
         return $arr;
     }
 }

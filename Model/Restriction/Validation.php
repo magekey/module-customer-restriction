@@ -1,6 +1,7 @@
 <?php
 /**
  * Copyright © MageKey. All rights reserved.
+ * See LICENSE.txt for license details.
  */
 namespace MageKey\CustomerRestriction\Model\Restriction;
 
@@ -13,7 +14,7 @@ class Validation
      * @var RestrictionHelper
      */
     protected $restrictionHelper;
-    
+
     /**
      * @var Pool
      */
@@ -30,7 +31,7 @@ class Validation
         $this->restrictionHelper = $restrictionHelper;
         $this->restrictionPool = $restrictionPool;
     }
-    
+
     /**
      * Validate restriction
      *
@@ -58,10 +59,10 @@ class Validation
                 }
             }
         }
-        
+
         return true;
     }
-    
+
     /**
      * Throw exception
      *

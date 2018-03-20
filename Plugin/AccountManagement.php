@@ -1,6 +1,7 @@
 <?php
 /**
  * Copyright © MageKey. All rights reserved.
+ * See LICENSE.txt for license details.
  */
 namespace MageKey\CustomerRestriction\Plugin;
 
@@ -24,7 +25,7 @@ class AccountManagement
     ) {
         $this->restrictionValidation = $restrictionValidation;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -37,7 +38,7 @@ class AccountManagement
         $this->restrictionValidation->validate(RestrictionHelper::RESTRICTION_REGISTRATION, $customer->getEmail());
         return [$customer, $password, $redirectUrl];
     }
-    
+
     /**
      * {@inheritdoc}
      */

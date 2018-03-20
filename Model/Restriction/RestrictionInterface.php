@@ -1,10 +1,11 @@
 <?php
 /**
  * Copyright © MageKey. All rights reserved.
+ * See LICENSE.txt for license details.
  */
 namespace MageKey\CustomerRestriction\Model\Restriction;
 
-interface RestrictionInterface 
+interface RestrictionInterface
 {
     /**
      * Check if is allow mode
@@ -12,7 +13,7 @@ interface RestrictionInterface
      * @return bool
      */
     public function isAllowMode();
-    
+
     /**
      * Check if restriction is valid in allow mode
      *
@@ -20,7 +21,7 @@ interface RestrictionInterface
      * @return bool
      */
     public function isValid($value);
-    
+
     /**
      * Retrieve error message
      *

@@ -1,6 +1,7 @@
 <?php
 /**
  * Copyright © MageKey. All rights reserved.
+ * See LICENSE.txt for license details.
  */
 namespace MageKey\CustomerRestriction\Block\Adminhtml\System\Config;
 
@@ -10,7 +11,7 @@ class PatternMap extends AbstractFieldArray
 {
     /**
      * Internal constructor
-     * 
+     *
      * @return void
      */
     protected function _construct()

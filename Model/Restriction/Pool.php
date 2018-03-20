@@ -1,6 +1,7 @@
 <?php
 /**
  * Copyright © MageKey. All rights reserved.
+ * See LICENSE.txt for license details.
  */
 namespace MageKey\CustomerRestriction\Model\Restriction;
 
@@ -10,7 +11,7 @@ class Pool
      * @var \Magento\Framework\ObjectManagerInterface
      */
     protected $observerFactory;
-    
+
     /**
      * @var array
      */
@@ -26,7 +27,7 @@ class Pool
         $this->observerFactory = $observerFactory;
         $this->restrictions = $restrictions;
     }
-    
+
     /**
      * Retrieve restriction observers
      *
@@ -43,7 +44,7 @@ class Pool
         }
         return $observers;
     }
-    
+
     /**
      * Retrieve restriction observers
      *
