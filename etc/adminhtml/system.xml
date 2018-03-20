@@ -25,10 +25,11 @@
                         <label>Apply conditions</label>
                         <source_model>MageKey\CustomerRestriction\Model\Config\Source\RestrictionConditions</source_model>
                     </field>
-                    <field id="patterns" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <field id="patterns" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Email Patterns</label>
                         <frontend_model>MageKey\CustomerRestriction\Block\Adminhtml\System\Config\PatternMap</frontend_model>
                         <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                        <comment><![CDATA[Email Patterns use php preg_match function.]]></comment>
                     </field>
                     <field id="error_message" translate="label" sortOrder="100" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Error Message</label>
@@ -47,10 +48,11 @@
                         <label>Apply conditions</label>
                         <source_model>MageKey\CustomerRestriction\Model\Config\Source\RestrictionConditions</source_model>
                     </field>
-                    <field id="patterns" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <field id="patterns" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Email Patterns</label>
                         <frontend_model>MageKey\CustomerRestriction\Block\Adminhtml\System\Config\PatternMap</frontend_model>
                         <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                        <comment><![CDATA[Email Patterns use php preg_match function.]]></comment>
                     </field>
                     <field id="error_message" translate="label" sortOrder="100" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Error Message</label>

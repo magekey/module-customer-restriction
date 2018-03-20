@@ -14,6 +14,23 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     const RESTRICTION_LOGIN = 'login';
 
     /**
+     * @var \Magento\Framework\App\ProductMetadataInterface
+     */
+    protected $productMetadata;
+
+    /**
+     * @param \Magento\Framework\App\Helper\Context $context
+     * @param \Magento\Framework\App\ProductMetadataInterface $productMetadata
+     */
+    public function __construct(
+        \Magento\Framework\App\Helper\Context $context,
+        \Magento\Framework\App\ProductMetadataInterface $productMetadata
+    ) {
+        $this->productMetadata = $productMetadata;
+        parent::__construct($context);
+    }
+
+    /**
      * Check if restriction enabled
      *
      * @param string $restriction
@@ -64,7 +81,12 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         $arr = [];
         if ($patterns = $this->getRestrictionData($restriction, $path)) {
-            $patterns = unserialize($patterns);
+            if (version_compare($this->productMetadata->getVersion(), '2.2.0', '>=')) {
+                $patterns = json_decode($patterns, true);
+            } else {
+                $patterns = unserialize($patterns);
+            }
+
             if (is_array($patterns)) {
                 foreach ($patterns as $item) {
                     if (!empty($item['pattern'])) {
