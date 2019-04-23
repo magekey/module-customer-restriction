@@ -26,4 +26,7 @@ Navigate to **Stores** > **Configuration** > **Customers** section > **Customer 
 
 ## Versions tested
 > 2.1.12
+
 > 2.2.3
+
+> 2.3.1
